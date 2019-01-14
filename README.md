@@ -90,9 +90,10 @@ $ yarn watch
 
 ## Testing with JEST
 
-Uses [ts-jest] preset so you can write tests in typescript. It also
-integrates [jest-extended] which adds some pretty extra features (you have to
-import it when you want to use it: `import 'jest-extended'`).
+Uses [ts-jest] preset so you can write and run tests written in typescript. It
+support [inline-snapshots] powered by Prettier. It also integrates
+[jest-extended] which adds some pretty extra features (you have to import it
+when you want to use it: `import 'jest-extended'`).
 
 ```bash
 $ yarn jest # run all tests inside `./src` folder
@@ -126,3 +127,5 @@ vscode terminal, you can configure this in `.vscode/settings.json` under
 [vscode-typescript-tslint-plugin]:https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
 [code-runner]:https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 [jest-snapshot-language-support]: https://marketplace.visualstudio.com/items?itemName=tlent.jest-snapshot-language-support
+
+[inline-snapshots]:https://jestjs.io/docs/en/snapshot-testing#inline-snapshots
