@@ -3,7 +3,7 @@
 Yet another scaffolding project.
 
 A scaffolding repo to develop NodeJS apps written in typescript with support for
-linting + prettier + jest with great support in vscode. The goal is to have
+linting + prettier + jest and great support in vscode. The goal is to have
 typescript all the way down from development to testing with first class support
 in visual studio code.
 
