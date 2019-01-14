@@ -1,0 +1,22 @@
+{
+  "code-runner.runInTerminal": true,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "typescript": "node_modules/.bin/\"$(node ./scripts/custom-code-runner.js $fileName)\" $fullFileName"
+  },
+  "code-runner.executorMapByFileExtension":{
+    ".test.ts": "jest",
+  },
+  "code-runner.languageIdToFileExtensionMap": {
+    "typescript": ".ts",
+  },
+  "code-runner.ignoreSelection": true,
+  "code-runner.preserveFocus": true,
+  "code-runner.saveFileBeforeRun": true,
+  "prettier.requireConfig": true,
+  "prettier.tslintIntegration": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
+}

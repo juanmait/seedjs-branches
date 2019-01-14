@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [".tmp", "dist", "build", "node_modules", ".vscode"]
+  },
+  "rules": {
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "variable-name": [
+      false,
+      "allow-leading-underscore"
+    ]
+  }
+}
