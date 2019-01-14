@@ -10,7 +10,7 @@
     "ordered-imports": false,
     "object-literal-sort-keys": false,
     "variable-name": [
-      false,
+      true,
       "allow-leading-underscore"
     ]
   }
