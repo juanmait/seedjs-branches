@@ -48,14 +48,17 @@ auto formating and auto fixing via `ctrl+i`, on file save, on paste and more
 ### Linting scripts (yarn/npm)
 
 ```bash
-# check for any conflict between tslint and prettier configs
 $ yarn tslint-check
+# check for any conflict between tslint and prettier configs. Run this when you
+# add new rules to your tslint.json file. It will warn you about what are the
+# rules that you should avoid.
 
-# run tslint on all `.ts` files inside the `./src` folder.
 $ yarn lint
+# run tslint on all `.ts` files inside the `./src` folder.
 
-# run tslint and prettier to find errors and fix those that are possible to auto-fix
 $ yarn prettier-tslint
+# run tslint and prettier to find errors and fix those that are possible to
+# auto-fix.
 ```
 
 Check `package.json` files in the `"scripts"` field for details.
