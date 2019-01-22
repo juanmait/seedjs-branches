@@ -2,7 +2,7 @@
 import { Dirent } from 'fs'
 
 /* Custom */
-import readdirAsync from './util.readdirAsync'
+import readdirAsync from './readdirAsync'
 
 const PROJECT_ROOT = `${process.cwd()}`
 
