@@ -5,16 +5,24 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn watch",
-    "compile": "tsc",
+    "build": "tsc",
     "watch": "tsc -w",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "lint": "tslint 'src/**/*.{ts}'",
     "fix": "prettier-tslint fix 'src/**/*.ts'"
   },
+  "engines": {
+    "node": ">=10.15.0"
+  },
   "author": {
     "name": "Juan M. Cañabate (@juanmait)"
   },
-  "keywords": ["scaffolding", "typescript", "prettier", "jest"],
+  "keywords": [
+    "scaffolding",
+    "typescript",
+    "prettier",
+    "jest"
+  ],
   "devDependencies": {
     "@types/jest": "^23.3.11",
     "@types/node": "^10.12.18",
@@ -25,7 +33,7 @@
     "prettier": "^1.15.3",
     "prettier-tslint": "^0.4.2",
     "ts-jest": "^23.10.5",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.0.1",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"

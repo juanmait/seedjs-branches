@@ -16,7 +16,7 @@ in visual studio code.
 $ yarn install
 ```
 
-start (compile + watch):
+start (build + watch):
 
 ```bash
 $ yarn start
@@ -83,9 +83,9 @@ restrictive if you want. Check `tsconfig.json`.
 
 ```bash
 # transpile all `.ts` files in `./src` folder and place the result in the `./dist` folder
-$ yarn compile
+$ yarn build
 
-# same as `compile` but enables a watcher to auto compile on file changes
+# same as `build` but enables a watcher to auto build on file changes
 $ yarn watch
 ```
 
