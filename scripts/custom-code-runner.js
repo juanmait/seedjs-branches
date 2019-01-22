@@ -5,5 +5,5 @@
  */
 
 const { extname, basename } = require('path')
-const isTest = !Boolean(extname(basename(process.argv.slice(2)[0], '.test.ts')))
+const isTest = Boolean(process.argv.slice(2)[0].match(/\.test\.ts$/))
 console.log(isTest ? 'jest' : 'ts-node')
