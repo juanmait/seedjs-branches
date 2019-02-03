@@ -6,4 +6,4 @@
 
 const { extname, basename } = require('path')
 const isTest = Boolean(process.argv.slice(2)[0].match(/\.test\.ts$/))
-console.log(isTest ? 'jest' : 'ts-node')
+process.stdout.write(isTest ? 'jest' : 'ts-node')

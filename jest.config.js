@@ -1,17 +1,12 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
-  setupTestFrameworkScriptFile: 'jest-extended',
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/.tmp',
+    '<rootDir>/.vscode',
     '<rootDir>/dist',
     '<rootDir>/build',
-    '<rootDir>/scripts'
-  ],
-  globals: {
-    'ts-jest': {
-      diagnostics: true
-    }
-  }
+    '<rootDir>/.next',
+    '<rootDir>/scripts',
+    '<rootDir>/pages'
+  ]
 }

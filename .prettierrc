@@ -2,6 +2,6 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none",
+  "trailingComma": "all",
   "parser": "typescript"
 }
