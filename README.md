@@ -33,7 +33,7 @@ vscode shortcuts:
 
 + `ctrl+i`: auto fix/format using [prettier].
 + `ctrl+alt+n`: run the current file with [ts-node] if ends with `.ts` and with
-[jest] + [ts-jest] if ends with `.test.ts`.
+[jest] if ends with `.test.ts`.
 
 --------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ auto formating and auto fixing via `ctrl+i`, on file save, on paste and more
 ### Linting scripts (yarn/npm)
 
 ```bash
-$ yarn tslint-check
+$ yarn checkTslint
 # check for any conflict between tslint and prettier configs. Run this when you
 # add new rules to your tslint.json file. It will warn you about what are the
 # rules that you should avoid.
@@ -93,11 +93,6 @@ $ yarn watch
 
 ## Testing with JEST
 
-Uses [ts-jest] preset so you can write and run tests written in typescript. It
-support [inline-snapshots] powered by Prettier. It also integrates
-[jest-extended] which adds some pretty extra features (you have to import it
-when you want to use it: `import 'jest-extended'`).
-
 ```bash
 $ yarn jest # run all tests inside `./src` folder
 ```
@@ -121,8 +116,6 @@ vscode terminal, you can configure this in `.vscode/settings.json` under
 [husky]:https://github.com/typicode/husky
 [lint-staged]:https://www.npmjs.com/package/lint-staged
 [ts-node]:https://github.com/TypeStrong/ts-node
-[ts-jest]:https://github.com/kulshekhar/ts-jest
-[jest-extended]:https://github.com/jest-community/jest-extended
 [jest]:https://jestjs.io/
 
 <!-- vscode extensions -->
