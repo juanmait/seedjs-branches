@@ -1,5 +1,6 @@
 # 2019-02-04
 
++ update snapshoots to reflect new files
 + config babel to add ts support in jest tests
 + add `@babel/preset-typescript` and `@babel/preset-env`
 + create a `.babelrc` config file
