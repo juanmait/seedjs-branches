@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn watch",
+    "test": "jest",
     "build": "tsc",
     "watch": "tsc -w",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
