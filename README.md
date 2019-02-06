@@ -1,85 +1,101 @@
 # NodeJS + Typescript + Prettier + Jest + Vscode
 
-Yet another scaffolding project.
-
-A scaffolding repo to develop NodeJS apps written in typescript with support for
-linting + prettier + jest and great support in vscode. The goal is to have
-typescript all the way down from development to testing with first class support
-in visual studio code.
+A scaffolding repo to develop NodeJS apps or libs written either in
+typescript or ES2018 with support for linting, auto formating via [prettier],
+[jest] testing and great support in vscode.
 
 ---
 
-## TL;DR
+## Get started
 
 ```bash
-# install dependencies
 $ yarn install
-```
+# install dependencies
 
-start (build + watch):
-
-```bash
 $ yarn start
+# first build and watch for changes
 ```
 
-Install vscode extensions:
+### Recommended vscode extensions:
 
-- [prettier-vscode]
-- [vscode-typescript-tslint-plugin]
-- [code-runner]
-- [jest-snapshot-language-support]
+- [prettier-vscode] - format almost all files (`.md`, `.js`, `.ts`, `.tsx`,
+  `.json`, etc..) with one simple shortcut on the IDE.
+- [vscode-typescript-tslint-plugin] - show linting errors in typescript files.
+- [code-runner] - used to run the current open file in the IDE. The project have
+  a script that will launch the file with NodeJS or JEST depending on the file
+  extension.
+- [jest-snapshot-language-support] - add syntax highlighting for your Jest
+  [snapshots][snapshot-testing].
+- [eslint-vscode] - show linting errors in javascript files.
 
-vscode shortcuts:
+### Vscode shortcuts reference:
 
-- `ctrl+i`: auto fix/format using [prettier].
-- `ctrl+alt+n`: run the current file with [babel-node] if ends with `.ts` and with
-  [jest] if ends with `.test.ts`.
+- `CTRL+i`: auto fix/format current file using [prettier].
+- `CTRL+ALT+N`: run the current file with [babel-node] if ends with `.ts` or
+  `.js` or with [jest] if ends with `.test.ts`.
+
+**Note**: auto format will also run on file save and/or paste (check config at
+`.vscode/settings.json`).
 
 ---
-
-## Linting
-
-Combines [tslint] & [prettier] without conflicting each other by using
-[tslint-config-prettier]. For vscode the recommended extensions are
-[prettier-vscode] and [vscode-typescript-tslint-plugin]. Those enables linting,
-auto formating and auto fixing via `ctrl+i`, on file save, on paste and more
-(check config at `.vscode/settings.json`).
 
 ## Scripts (yarn)
 
 ```bash
 $ yarn build
-# compile all the src folder and generate declaration files
+# compile all the `src/` folder and place the output in the `dist/` folder. It
+# also generate the declaration files for typescript
+
+$ yarn watch
+# same as above but keep watching for file changes
+
+$ yarn test
+# run all the test files using JEST
 
 $ yarn typeCheck
 # check for typescript errors
 
 $ yarn build:types
-# generate typescript declaration files only
-
-$ yarn checkTslint
-# check for any conflict between tslint and prettier configs. Run this when you
-# add new rules to your tslint.json file. It will warn you about what are the
-# rules that you should avoid.
+# generate typescript declaration only
 
 $ yarn lint
-# run tslint on all `.ts` files inside the `./src` folder.
+# check for lint errors using tslint for `.ts` files and eslint for `.js`.
 
-$ yarn prettier-tslint
-# run tslint and prettier to find errors and fix those that are possible to
-# auto-fix.
+$ yarn fix
+# run auto format and auto fix using `prettier-tslint` and `prettier-eslint`
+
+$ yarn checkTslint
+# check for any conflict between `tslint` and prettier configs. Run this when
+# you add new rules to your tslint.json file. It will warn you about what are
+# the rules that you should avoid.
+
+$ yarn checkEslint
+# same as above but for `eslint`
 ```
 
-Check `package.json` files in the `"scripts"` field for details.
+Check `package.json` files in the `"scripts"` field for more details.
 
 ---
 
 ## Git Hooks
 
-Includes a _pre-commit_ hook that runs `prettier` and `tslint` in your **staged
-files** to check for errors (and auto fix them when possible) before commits. It
-will **abort** the commit phase if errors prevails after the auto fixing. It
-uses [husky] and [lint-staged] for that.
+Includes a _pre-commit_ hook that runs `fix`, `lint` and `typeCheck` in your
+**staged files** to check for errors (auto fix them when possible) and check for
+typescript errors before commits. It will **abort** the commit phase if errors
+prevails after the auto fixing. It uses [husky] and [lint-staged] for that.
+
+---
+
+## Testing with JEST
+
+Test also can be written in typescript or ES2018. [inline-snapshots] are
+supported!
+
+```bash
+$ yarn jest # run all your tests with jest
+```
+
+NOTE: You can also run the current file test in the IDE with `ctrl+alt+n`.
 
 ---
 
@@ -88,51 +104,53 @@ uses [husky] and [lint-staged] for that.
 The typescript configuration is pretty strict. Is up to you to make it less
 restrictive if you want. Check `tsconfig.json`.
 
-### Typescript scripts (yarn/npm)
-
-```bash
-# transpile all `.ts` files in `./src` folder and place the result in the `./dist` folder
-$ yarn build
-
-# same as `build` but enables a watcher to auto build on file changes
-$ yarn watch
-```
-
 ---
 
-## Testing with JEST
+## Links
 
-```bash
-$ yarn jest # run all tests inside `./src` folder
-```
+**Dependencies:**
 
----
-
-## Vscode support:
-
-- use prettier for auto formating `ctrl+i`, format on save, format on paste.
-- run `*.ts` and `*.test.ts` files directly from the IDE with key shortcut
-  `ctrl+alt+n`. It will use [ts-node] for `*.ts` files and [jest] with [ts-jest]
-  preset for `*.test.ts`. It uses vscode extension [code-runner] with a custom
-  config in `.vscode/settings.json`. By default it will run the process opening a
-  vscode terminal, you can configure this in `.vscode/settings.json` under
-  "code-runner.runInTerminal".
-
-<!-- modules and dev dependencies -->
+- [prettier]
+- [eslint]
+- [tslint]
+- [jest]
+- [babel]
+- [tslint-config-prettier]
+- [husky]
+- [lint-staged]
+- [babel-node]
+- [prettier-eslint-cli]
 
 [tslint]: https://palantir.github.io/tslint/
 [prettier]: https://prettier.io/
 [tslint-config-prettier]: https://github.com/prettier/tslint-config-prettier
 [husky]: https://github.com/typicode/husky
 [lint-staged]: https://www.npmjs.com/package/lint-staged
-[ts-node]: https://github.com/TypeStrong/ts-node
 [jest]: https://jestjs.io/
 [babel-node]: https://babeljs.io/docs/en/babel-node
+[babel]: https://babeljs.io/
+[eslint]: https://eslint.org/
 
-<!-- vscode extensions -->
+**Vscode Extensions:**
+
+- [prettier-vscode]
+- [vscode-typescript-tslint-plugin]
+- [code-runner]
+- [jest-snapshot-language-support]
+- [ESLint][eslint-vscode]
 
 [prettier-vscode]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 [vscode-typescript-tslint-plugin]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
 [code-runner]: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 [jest-snapshot-language-support]: https://marketplace.visualstudio.com/items?itemName=tlent.jest-snapshot-language-support
+[eslint-vscode]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[prettier-eslint-cli]: https://github.com/prettier/prettier-eslint-cli
+[tslint]: https://palantir.github.io/tslint/
+
+**Guides, references:**
+
+- [snapshot-testing]
+- [inline-snapshots]
+
+[snapshot-testing]: https://jestjs.io/docs/en/snapshot-testing
 [inline-snapshots]: https://jestjs.io/docs/en/snapshot-testing#inline-snapshots

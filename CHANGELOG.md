@@ -1,5 +1,8 @@
 # 2019-02-06
 
+- add [eslint] support for `.js` files and integrate with prettier
+- add revamp yarn scripts and add better documentation
+
 - use babel as the compiler for typescript and javascript files
 - add `typeCheck` to check types of typescript files
 - add script `build:types` && `watch:types` to generate typescript declarations
@@ -10,6 +13,8 @@
 - add [@babel/plugin-proposal-object-rest-spread] to support spread on js files
 - remove messed up comments in `tsconfig.json`
 - use nodejs spawn to exec current file via code-runner
+
+[eslint]: https://eslint.org/
 
 # 2019-02-05
 
