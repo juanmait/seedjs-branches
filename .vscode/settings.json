@@ -3,14 +3,9 @@
   "code-runner.showExecutionMessage": false,
   "code-runner.clearPreviousOutput": true,
   "code-runner.executorMap": {
-    "javascript": "node",
-    "typescript": "node_modules/.bin/\"$(node ./scripts/custom-code-runner.js $fileName)\" $fullFileName"
-  },
-  "code-runner.executorMapByFileExtension":{
-    ".test.ts": "jest",
-  },
-  "code-runner.languageIdToFileExtensionMap": {
-    "typescript": ".ts",
+    "javascript": "node scripts/custom-code-runner.js $fullFileName",
+    "typescript": "node scripts/custom-code-runner.js $fullFileName"
+
   },
   "code-runner.ignoreSelection": true,
   "code-runner.preserveFocus": true,
@@ -29,5 +24,6 @@
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true,
     "dist/**": true
-  }
+  },
+  "json.format.enable": true
 }
