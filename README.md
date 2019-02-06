@@ -106,6 +106,22 @@ restrictive if you want. Check `tsconfig.json`.
 
 ---
 
+## Fork
+
+- Clone or create a new empty repo.
+- Add it as remote _seed_: `git remote add seed git@github.com:juanmait/node-typescript-prettier-jest-vscode.git`.
+- Fetch remote info: `git remote update`.
+- merge with _seed_: `git merge seed/master`.
+- Update your `package.json` and the README to match your preference and commit.
+  Set master to your origin: `git branch --set-upstream-to=origin/master master`.
+  Push to origin: `git push origin master`.
+
+## Sync (integrate seed changes)
+
+- Update the remotes info: `git remote update`
+- Merge with Seed: `git merge seed/master`.
+- Push to origin: `git push origin master`.
+
 ## Links
 
 **Dependencies:**

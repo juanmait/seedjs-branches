@@ -1,5 +1,6 @@
 # 2019-02-06
 
+- add _Fork_ info to the readme
 - add [eslint] support for `.js` files and integrate with prettier
 - add revamp yarn scripts and add better documentation
 
