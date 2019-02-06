@@ -122,8 +122,8 @@ restrictive if you want. Check `tsconfig.json`.
 - Fetch remote info: `git remote update`.
 - merge with _seed_: `git merge seed/master`.
 - Update your `package.json` and the README to match your preference and commit.
-  Set master to your origin: `git branch --set-upstream-to=origin/master master`.
-  Push to origin: `git push origin master`.
+- Set master to your origin: `git branch --set-upstream-to=origin/master master`.
+- Push to origin: `git push origin master`.
 
 ## Sync (integrate seed changes)
 
