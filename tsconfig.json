@@ -16,7 +16,7 @@
     // "removeComments": true,
     "noEmit": true,
     "pretty": true,
-    "importHelpers": true,
+    "importHelpers": false,
     // "downlevelIteration": true,
     // "isolatedModules": true,
     "strict": true,
