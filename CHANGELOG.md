@@ -1,10 +1,13 @@
 # 2019-02-06
 
+- add `fix`, `lint` & `typeCheck` to the `build` script
+- exclude files outside `src` in `tsconfig.json`
+- add file `eslint-no-cry.js` to avoid eslint throwing errors because no `.js`
+  files were found. See: https://github.com/eslint/eslint/issues/10587
 - disable tslint rule `interface-name`
 - add _Fork_ info to the readme
 - add [eslint] support for `.js` files and integrate with prettier
 - add revamp yarn scripts and add better documentation
-
 - use babel as the compiler for typescript and javascript files
 - add `typeCheck` to check types of typescript files
 - add script `build:types` && `watch:types` to generate typescript declarations

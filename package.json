@@ -7,7 +7,7 @@
     "start": "concurrently \"yarn watch\" \"yarn watch:types\"",
     "watch": "yarn build --watch",
     "test": "jest",
-    "build": "rm -rf dist; yarn build:types; babel src --out-dir dist --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
+    "build": "yarn clean && yarn fix && yarn lint && yarn typeCheck && yarn build:types && babel src --out-dir dist --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
     "build:types": "tsc --emitDeclarationOnly --declaration --allowJs false --checkJs false --noEmit false",
     "watch:types": "yarn build:types --watch",
     "typeCheck": "tsc",
@@ -18,7 +18,8 @@
     "lint-ts": "tslint 'src/**/*.{ts}'",
     "lint-js": "eslint 'src/**/*.js'",
     "fix-ts": "prettier-tslint fix 'src/**/*.ts'",
-    "fix-js": "prettier-eslint 'src/**/*.js' --write"
+    "fix-js": "prettier-eslint 'src/**/*.js' --write",
+    "clean": "rm -rf dist"
   },
   "engines": {
     "node": ">=10.15.0"
