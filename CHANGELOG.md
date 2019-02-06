@@ -1,5 +1,6 @@
 # 2019-02-06
 
+- exclude `dist/` from tsconfig
 - add `fix`, `lint` & `typeCheck` to the `build` script
 - exclude files outside `src` in `tsconfig.json`
 - add file `eslint-no-cry.js` to avoid eslint throwing errors because no `.js`

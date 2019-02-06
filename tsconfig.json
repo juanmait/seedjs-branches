@@ -53,6 +53,7 @@
     "**/*.test.ts",
     "scripts",
     "jest.config.js",
-    ".tmp"
+    ".tmp",
+    "dist"
   ]
 }
