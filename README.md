@@ -42,12 +42,18 @@ $ yarn start
 ## Scripts (yarn)
 
 ```bash
+$ yarn prebuild
+# run `clean`, `fix`, `lint` & `typeCheck`
+
 $ yarn build
 # compile all the `src/` folder and place the output in the `dist/` folder. It
 # also generate the declaration files for typescript
 
 $ yarn watch
 # same as above but keep watching for file changes
+
+$ yarn release
+# run `prebuild` & `build`
 
 $ yarn test
 # run all the test files using JEST
@@ -71,6 +77,9 @@ $ yarn checkTslint
 
 $ yarn checkEslint
 # same as above but for `eslint`
+
+$ yarn clean
+# remove the dist folder
 ```
 
 Check `package.json` files in the `"scripts"` field for more details.

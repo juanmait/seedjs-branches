@@ -1,5 +1,6 @@
 # 2019-02-06
 
+- add `prebuild` & `release` scripts
 - exclude `dist/` from tsconfig
 - add `fix`, `lint` & `typeCheck` to the `build` script
 - exclude files outside `src` in `tsconfig.json`
