@@ -19,6 +19,7 @@
     "importHelpers": false,
     // "downlevelIteration": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -37,7 +38,6 @@
     // "typeRoots": [],
     // "types": [],
     "allowSyntheticDefaultImports": true,
-    // "esModuleInterop": false
     // "preserveSymlinks": true,
     // "sourceRoot": "",
     // "mapRoot": "",

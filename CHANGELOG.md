@@ -1,5 +1,7 @@
 # 2019-02-10
 
+- enable option `esModuleInterop` in `tsconfig.json` for better interoperation
+  with babel
 - remove option `rootDirs` from `tsconfig.json`
 - add `"README.md"` and `"CHANGELOG.md"` to the list of included files in
   package.json
