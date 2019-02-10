@@ -43,7 +43,7 @@ $ yarn start
 
 ```bash
 $ yarn prebuild
-# run `clean`, `fix`, `lint` & `typeCheck`
+# run `clean`, `fix`, `lint` & `checkTypes`
 
 $ yarn build
 # compile all the `src/` folder and place the output in the `dist/` folder. It
@@ -58,7 +58,7 @@ $ yarn release
 $ yarn test
 # run all the test files using JEST
 
-$ yarn typeCheck
+$ yarn checkTypes
 # check for typescript errors
 
 $ yarn build:types
@@ -88,7 +88,7 @@ Check `package.json` files in the `"scripts"` field for more details.
 
 ## Git Hooks
 
-Includes a _pre-commit_ hook that runs `fix`, `lint` and `typeCheck` in your
+Includes a _pre-commit_ hook that runs `fix`, `lint` and `checkTypes` in your
 **staged files** to check for errors (auto fix them when possible) and check for
 typescript errors before commits. It will **abort** the commit phase if errors
 prevails after the auto fixing. It uses [husky] and [lint-staged] for that.
