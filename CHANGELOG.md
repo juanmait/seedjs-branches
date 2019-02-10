@@ -1,3 +1,7 @@
+# 2019-02-10
+
+- rename script `typeCheck` to `checkTypes`
+
 # 2019-02-06
 
 - add `prebuild` & `release` scripts

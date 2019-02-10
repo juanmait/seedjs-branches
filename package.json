@@ -8,11 +8,11 @@
     "watch": "yarn build --watch",
     "test": "jest",
     "build": "yarn build:types && babel src --out-dir dist --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
-    "prebuild": "yarn clean && yarn fix && yarn lint && yarn typeCheck",
+    "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
     "release": "yarn prebuild && yarn build",
     "build:types": "tsc --emitDeclarationOnly --declaration --allowJs false --checkJs false --noEmit false",
     "watch:types": "yarn build:types --watch",
-    "typeCheck": "tsc",
+    "checkTypes": "tsc",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
     "checkEslint": "eslint --print-config . | eslint-config-prettier-check",
     "fix": "concurrently \"yarn fix-ts\" \"yarn fix-js\"",
@@ -70,7 +70,7 @@
     "*.{ts}": [
       "yarn fix-ts",
       "yarn lint-ts",
-      "yarn typeCheck"
+      "yarn checkTypes"
     ],
     "*.{js}": [
       "yarn fix-js",
