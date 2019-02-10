@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- remove option `rootDirs` from `tsconfig.json`
 - add `"README.md"` and `"CHANGELOG.md"` to the list of included files in
   package.json
 - rename script `typeCheck` to `checkTypes`
