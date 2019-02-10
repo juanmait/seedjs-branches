@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- update info about syncing with upstream
 - enable option `esModuleInterop` in `tsconfig.json` for better interoperation
   with babel
 - remove option `rootDirs` from `tsconfig.json`

@@ -125,11 +125,26 @@ restrictive if you want. Check `tsconfig.json`.
 - Set master to your origin: `git branch --set-upstream-to=origin/master master`.
 - Push to origin: `git push origin master`.
 
-## Sync (integrate seed changes)
+## Sync
 
-- Update the remotes info: `git remote update`
-- Merge with Seed: `git merge seed/master`.
-- Push to origin: `git push origin master`.
+Integrate the changes in this repo on yours.
+
+```bash
+# Place yourself in master (your repo)
+$ git checkout master
+
+# Set the **_base_** upstream
+$ git remote add base git@github.com:juanmait/node-typescript-prettier-jest-vscode.git
+
+# Update the remotes info
+$ git remote update
+
+# Merge with the branch `node-browser-lib` from **_base_**
+$ git merge base/node-browser-lib
+
+# Push to origin
+$ git push origin master
+```
 
 ## Links
 
