@@ -13,6 +13,7 @@
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --isolatedModules false --allowJs false --checkJs false --noEmit false",
     "watch:types": "yarn build:types --watch",
     "checkTypes": "tsc",
+    "checkConflicts": "yarn checkTslint && yarn checkEslint",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
     "checkEslint": "eslint --print-config . | eslint-config-prettier-check",
     "fix": "concurrently \"yarn fix-ts\" \"yarn fix-js\"",

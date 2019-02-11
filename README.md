@@ -70,6 +70,9 @@ $ yarn lint
 $ yarn fix
 # run auto format and auto fix using `prettier-tslint` and `prettier-eslint`
 
+$ yarn checkConflicts
+# detect eslint/tslint configurations that can collide with prettier
+
 $ yarn checkTslint
 # check for any conflict between `tslint` and prettier configs. Run this when
 # you add new rules to your tslint.json file. It will warn you about what are
