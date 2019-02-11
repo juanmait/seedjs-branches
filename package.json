@@ -10,7 +10,7 @@
     "build": "yarn build:types && babel src --out-dir dist --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
     "release": "yarn prebuild && yarn build",
-    "build:types": "tsc --emitDeclarationOnly --declaration --allowJs false --checkJs false --noEmit false",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --isolatedModules false --allowJs false --checkJs false --noEmit false",
     "watch:types": "yarn build:types --watch",
     "checkTypes": "tsc",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",

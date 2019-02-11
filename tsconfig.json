@@ -6,8 +6,18 @@
     "allowJs": true,
     "checkJs": true,
     // "jsx": "react",
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+
+    /**
+     * make go-to-definition on a declaration from a .d.ts file go to the source
+     * file (.ts) location where that declaration was defined, and not to
+     * the .d.ts.
+     * The options is disabled and should remain that way to play well with
+     * babel. However it can be enabled via --declarationMap cli option like the
+     * `build:types` script does.
+     */
+    "declarationMap": false,
+
     // "sourceMap": true,
     // "outFile": "./",
     "outDir": "dist",
