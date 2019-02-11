@@ -11,5 +11,13 @@
     "node": true,
     "browser": true
   },
-  "extends": ["eslint:recommended", "prettier"]
+  "extends": ["eslint:recommended", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

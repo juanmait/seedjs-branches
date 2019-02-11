@@ -1,3 +1,7 @@
+# 2019-02-11
+
+- make eslint to include env `jest` in files matching `*.test.js`
+
 # 2019-02-10
 
 - make the project to ignore _build/_ folder
