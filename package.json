@@ -5,12 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn build:types && react-scripts build ",
+    "build": "react-scripts build ",
     "test": "react-scripts test --watchAll=false",
     "watch": "yarn build --watch",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
     "release": "yarn prebuild && yarn build",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --isolatedModules false --allowJs false --checkJs false --noEmit false",
     "watch:types": "yarn build:types --watch",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",
@@ -22,7 +21,7 @@
     "lint-js": "eslint 'src/**/*.js'",
     "fix-ts": "prettier-tslint fix 'src/**/*.ts'",
     "fix-js": "prettier-eslint 'src/**/*.js' --write",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf build"
   },
   "engines": {
     "node": ">=10.15.0"
@@ -89,11 +88,6 @@
       "yarn lint-js"
     ]
   },
-  "files": [
-    "dist",
-    "README.md",
-    "CHANGELOG.md"
-  ],
   "browserslist": [
     ">0.2%",
     "not dead",
