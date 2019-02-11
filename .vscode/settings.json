@@ -3,10 +3,8 @@
   "code-runner.showExecutionMessage": false,
   "code-runner.clearPreviousOutput": true,
   "code-runner.executorMapByGlob": {
-    "*.(test|spec).(j|t)s": "yarn test",
-    "*.(test|spec).(j|t)sx": "yarn test",
-    "*.(j|t)s": "NODE_ENV=development yarn babel-node --extensions '.ts,.js,.tsx,.jsx'",
-    "*.(j|t)sx": "NODE_ENV=development yarn babel-node --extensions '.ts,.js,.tsx,.jsx'"
+    "*.(test|spec).(j|t)(sx|s)": "yarn test",
+    "*.(j|t)(sx|s)": "BABEL_ENV=test node_modules/.bin/babel-node --extensions \".ts,.js,.tsx,.jsx,.svg,.css\""
   },
   "code-runner.ignoreSelection": true,
   "code-runner.preserveFocus": true,

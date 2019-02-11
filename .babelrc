@@ -4,14 +4,21 @@
 // studio code
 {
   "presets": [
-    "react-app",
+    [
+      "react-app",
+      {
+        "flow": false,
+        "typescript": true
+      }
+    ],
     [
       "@babel/preset-env",
       {
         "targets": {
-          "node": true
+          "node": "current"
         }
       }
     ]
-  ]
+  ],
+  "plugins": ["react-require"]
 }

@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- make code-runner to play well with `.tsx` & `.jsx` files
 - make code-runner to use [babel-preset-react-app]
 - add code-runner support for regular _jsx/tsx_ files
 - add code-runner support for _jsx/tsx_ test files
