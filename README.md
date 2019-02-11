@@ -46,7 +46,7 @@ $ yarn prebuild
 # run `clean`, `fix`, `lint` & `checkTypes`
 
 $ yarn build
-# compile all the `src/` folder and place the output in the `dist/` folder. It
+# compile all the `src/` folder and place the output in the `build/` folder. It
 # also generate the declaration files for typescript
 
 $ yarn watch
@@ -82,7 +82,7 @@ $ yarn checkEslint
 # same as above but for `eslint`
 
 $ yarn clean
-# remove the dist folder
+# remove the build/ folder
 ```
 
 Check `package.json` files in the `"scripts"` field for more details.

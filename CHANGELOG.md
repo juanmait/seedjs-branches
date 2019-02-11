@@ -1,5 +1,7 @@
 # 2019-02-11
 
+- make the source maps to go `inline`
+- make the output to go to _build_ folder instead of _dist_
 - update example snapshot to exclude removed scripts folder
 - exclude test files in `tsconfig.json`
 - remove `custom-code-runner.js` and use [code-runner] glob patters instead
