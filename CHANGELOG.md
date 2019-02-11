@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- remove `build:types` info from README.md
 - remove script `build:types` as it is no necessary to have typings for an app
 - add react and react-dom dependencies
 - add env `SKIP_PREFLIGHT_CHECK` to avoid react warnings about babel-eslint

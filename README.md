@@ -61,9 +61,6 @@ $ yarn test
 $ yarn checkTypes
 # check for typescript errors
 
-$ yarn build:types
-# generate typescript declaration only
-
 $ yarn lint
 # check for lint errors using tslint for `.ts` files and eslint for `.js`.
 
