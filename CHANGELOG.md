@@ -2,6 +2,7 @@
 
 - remove `jest.config.js` as react-app have his own config
 - make code-runner to use `yarn test` instead of `yarn jest`
+- exclude test files in `tsconfig.json`
 - remove `custom-code-runner.js` and use [code-runner] glob patters instead
 - update example snapshot in `readdirAsync.test.ts`
 - make eslint to include env `jest` in files matching `*.test.js`
