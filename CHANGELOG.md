@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- make code-runner to use `yarn test` instead of `yarn jest`
 - remove `custom-code-runner.js` and use [code-runner] glob patters instead
 - update example snapshot in `readdirAsync.test.ts`
 - make eslint to include env `jest` in files matching `*.test.js`

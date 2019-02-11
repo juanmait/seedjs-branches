@@ -3,7 +3,7 @@
   "code-runner.showExecutionMessage": false,
   "code-runner.clearPreviousOutput": true,
   "code-runner.executorMapByGlob": {
-    "*.test.(j|t)s": "yarn jest",
+    "*.test.(j|t)s": "yarn test",
     "*.(j|t)s": "yarn babel-node --extensions '.ts,.js'"
   },
   "code-runner.ignoreSelection": true,
