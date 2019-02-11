@@ -11,5 +11,13 @@
     "node": true,
     "browser": true
   },
-  "extends": ["eslint:recommended", "react-app", "prettier"]
+  "extends": ["eslint:recommended", "react-app", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
