@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- remove `jest.config.js` as react-app have his own config
 - make code-runner to use `yarn test` instead of `yarn jest`
 - remove `custom-code-runner.js` and use [code-runner] glob patters instead
 - update example snapshot in `readdirAsync.test.ts`
