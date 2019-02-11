@@ -5,7 +5,8 @@
   "code-runner.executorMapByGlob": {
     "*.(test|spec).(j|t)s": "yarn test",
     "*.(test|spec).(j|t)sx": "yarn test",
-    "*.(j|t)s": "yarn babel-node --extensions '.ts,.js'"
+    "*.(j|t)s": "yarn babel-node --extensions '.ts,.js,.tsx,.jsx'",
+    "*.(j|t)sx": "yarn babel-node --extensions '.ts,.js,.tsx,.jsx'"
   },
   "code-runner.ignoreSelection": true,
   "code-runner.preserveFocus": true,
