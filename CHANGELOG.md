@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- update example snapshot in `readdirAsync.test.ts`
 - make eslint to include env `jest` in files matching `*.test.js`
 
 # 2019-02-10

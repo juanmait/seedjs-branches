@@ -8,6 +8,8 @@ test('the project has the expected files', async () => {
   expect(dirents).toMatchInlineSnapshot(`
 Array [
   ".babelrc",
+  ".eslintignore",
+  ".eslintrc.json",
   ".git",
   ".gitignore",
   ".prettierignore",
