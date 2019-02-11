@@ -4,6 +4,7 @@
 - add [eslint-config-react-app] extension to `.eslintrc.json`
 - add [react-scripts]
 - add `browserslist` config in `package.json` and add documentation about it
+- make typescript to `skipLibCheck`
 - replace tsconfig `exclude` for `include`
 - add script `checkConflicts`
 - make source maps to be in different files instead of inline

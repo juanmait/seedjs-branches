@@ -3,6 +3,7 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
 
+    // see: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#new---skiplibcheck
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
