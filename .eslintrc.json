@@ -11,5 +11,5 @@
     "node": true,
     "browser": true
   },
-  "extends": ["eslint:recommended", "prettier"]
+  "extends": ["eslint:recommended", "react-app", "prettier"]
 }

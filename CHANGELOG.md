@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add [eslint-config-react-app] extension to `.eslintrc.json`
 - add [react-scripts]
 - add `browserslist` config in `package.json` and add documentation about it
 - add script `checkConflicts`
@@ -17,6 +18,7 @@
 - rename script `typeCheck` to `checkTypes`
 
 [react-scripts]: https://www.npmjs.com/package/react-scripts
+[eslint-config-react-app]: https://www.npmjs.com/package/eslint-config-react-app
 
 # 2019-02-06
 
