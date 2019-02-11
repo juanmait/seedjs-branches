@@ -56,13 +56,5 @@
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false
   },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "scripts",
-    "jest.config.js",
-    ".tmp",
-    "dist"
-  ]
+  "include": ["src"]
 }
