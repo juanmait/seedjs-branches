@@ -1,3 +1,4 @@
 dist
+build
 .vscode
 /node_modules/*
