@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- add code-runner support for _jsx/tsx_ test files
 - remove `jest.config.js` as react-app have his own config
 - make code-runner to use `yarn test` instead of `yarn jest`
 - exclude test files in `tsconfig.json`
