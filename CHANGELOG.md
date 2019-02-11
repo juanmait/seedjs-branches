@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- make code-runner to use [babel-preset-react-app]
 - add code-runner support for regular _jsx/tsx_ files
 - add code-runner support for _jsx/tsx_ test files
 - remove `jest.config.js` as react-app have his own config
@@ -10,6 +11,7 @@
 - make eslint to include env `jest` in files matching `*.test.js`
 
 [code-runner]: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+[babel-preset-react-app]: https://www.npmjs.com/package/babel-preset-react-app
 
 # 2019-02-10
 
