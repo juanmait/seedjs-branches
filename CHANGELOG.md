@@ -1,7 +1,10 @@
 # 2019-02-11
 
+- remove `custom-code-runner.js` and use [code-runner] glob patters instead
 - update example snapshot in `readdirAsync.test.ts`
 - make eslint to include env `jest` in files matching `*.test.js`
+
+[code-runner]: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 
 # 2019-02-10
 
