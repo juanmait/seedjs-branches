@@ -89,6 +89,15 @@ Check `package.json` files in the `"scripts"` field for more details.
 
 ---
 
+## Configure the compile target
+
+You can customize your target support browsers by adjusting the `browserslist`
+key in `package.json` according to the [Browserslist specification][browserslist].
+
+This affects not only the generated javascript but also the css.
+
+[browserslist]: https://github.com/browserslist/browserslist#readme
+
 ## Git Hooks
 
 Includes a _pre-commit_ hook that runs `fix`, `lint` and `checkTypes` in your
