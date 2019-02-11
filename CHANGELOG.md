@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add `jsx` support for typescript
 - add [eslint-config-react-app] extension to `.eslintrc.json`
 - add [react-scripts]
 - add `browserslist` config in `package.json` and add documentation about it
