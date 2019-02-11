@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add [react-scripts]
 - add `browserslist` config in `package.json` and add documentation about it
 - add script `checkConflicts`
 - make source maps to be in different files instead of inline
@@ -14,6 +15,8 @@
 - add `"README.md"` and `"CHANGELOG.md"` to the list of included files in
   package.json
 - rename script `typeCheck` to `checkTypes`
+
+[react-scripts]: https://www.npmjs.com/package/react-scripts
 
 # 2019-02-06
 
