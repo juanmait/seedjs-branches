@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add react and react-dom dependencies
 - add env `SKIP_PREFLIGHT_CHECK` to avoid react warnings about babel-eslint
   versions
 - add react app example in _src/_ folder
