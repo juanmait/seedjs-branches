@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- make the project to ignore _build/_ folder
 - make typescript to `skipLibCheck`
 - replace tsconfig `exclude` for `include`
 - add script `checkConflicts`
