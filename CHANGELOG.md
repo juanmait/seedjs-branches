@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add react app example in _src/_ folder
 - add _public/_ folder
 - add react scripts `start`, `build` & `test`
 - add eslint dependencies to make [eslint-config-react-app] to work okay
