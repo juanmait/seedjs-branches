@@ -3,6 +3,7 @@ import readdirAsync from './readdirAsync'
 test('the project has the expected files', async () => {
   const dirents = (await readdirAsync(process.cwd()))
     .map(dirent => dirent.name)
+    .filter(name => name !== '.env')
     .sort()
 
   expect(dirents).toMatchInlineSnapshot(`
@@ -21,7 +22,6 @@ Array [
   "jest.config.js",
   "node_modules",
   "package.json",
-  "scripts",
   "src",
   "tsconfig.json",
   "tslint.json",

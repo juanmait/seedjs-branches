@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- update example snapshot to exclude removed scripts folder
 - exclude test files in `tsconfig.json`
 - remove `custom-code-runner.js` and use [code-runner] glob patters instead
 - update example snapshot in `readdirAsync.test.ts`
