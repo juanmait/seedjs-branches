@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- add react scripts `start`, `build` & `test`
 - add eslint dependencies to make [eslint-config-react-app] to work okay
 - add `jsx` support for typescript
 - add [eslint-config-react-app] extension to `.eslintrc.json`
