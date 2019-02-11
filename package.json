@@ -10,7 +10,6 @@
     "watch": "yarn build --watch",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
     "release": "yarn prebuild && yarn build",
-    "watch:types": "yarn build:types --watch",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
