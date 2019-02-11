@@ -1,5 +1,6 @@
 # 2019-02-10
 
+- replace tsconfig `exclude` for `include`
 - add script `checkConflicts`
 - make source maps to be in different files instead of inline
 - improve interoperability between typescript and babel
