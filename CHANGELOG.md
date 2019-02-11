@@ -1,5 +1,7 @@
 # 2019-02-10
 
+- upgrade `@types/node ^10.12.21 → ^10.12.24`
+- upgrade `typescript ^3.3.1 → ^3.3.3`
 - update info about syncing with upstream
 - enable option `esModuleInterop` in `tsconfig.json` for better interoperation
   with babel
