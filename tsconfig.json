@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    // see: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#new---skiplibcheck
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+
     "target": "esnext",
     "module": "esnext",
     // "lib": ["es2016"],
