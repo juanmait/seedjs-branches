@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- remove script `build:types` as types are not necessary for a node process
 - add a simple node http server as example file
 - add `esnext` as lib in `tsconfig.json` to restrict code suggestions to node env
 - make the source maps to go `inline`

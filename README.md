@@ -33,6 +33,8 @@ $ yarn start
 - `CTRL+i`: auto fix/format current file using [prettier].
 - `CTRL+ALT+N`: run the current file with [babel-node] if ends with `.ts` or
   `.js` or with [jest] if ends with `.test.ts`.
+- `F5`: launch the debugger in the current file (no need for special _launch_
+  settings for this).
 
 **Note**: auto format will also run on file save and/or paste (check config at
 `.vscode/settings.json`).
@@ -60,9 +62,6 @@ $ yarn test
 
 $ yarn checkTypes
 # check for typescript errors
-
-$ yarn build:types
-# generate typescript declaration only
 
 $ yarn lint
 # check for lint errors using tslint for `.ts` files and eslint for `.js`.
