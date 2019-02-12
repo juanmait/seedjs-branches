@@ -1,5 +1,6 @@
 # 2019-02-12
 
+- make babel compile to ignore all test files
 - add `start` script to start process using [babel-node]
 - make test pass ignoring _build_/ folder
 - make output go to build instead of dist folder
