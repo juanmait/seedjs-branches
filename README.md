@@ -47,8 +47,11 @@ $ yarn start
 $ yarn start
 # start the process in development mode via babel-node (no need for compiling)
 
+$ yarn start:production
+# start the process in production mode (use the compiled code in the build dir)
+
 $ yarn watch
-# compile and watch for changes
+# compile src and watch for changes
 
 $ yarn build
 # build for prod (prebuild + test + compile)

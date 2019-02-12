@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development babel-node --extensions '.ts,.js' src",
+    "start:production": "NODE_ENV=production node build",
     "watch": "yarn compile --watch",
     "test": "jest",
     "compile": "babel src --out-dir build --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.ts,src/**/*.spec.js,src/**/*.test.ts,src/**/*.test.js'",
