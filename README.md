@@ -13,7 +13,7 @@ $ yarn install
 # install dependencies
 
 $ yarn start
-# first build and watch for changes
+# start dev server and open the browser
 ```
 
 ### Recommended vscode extensions:
@@ -42,18 +42,11 @@ $ yarn start
 ## Scripts (yarn)
 
 ```bash
+$ yarn build
+# build for prod (it will run prebuild automatically)
+
 $ yarn prebuild
 # run `clean`, `fix`, `lint` & `checkTypes`
-
-$ yarn build
-# compile all the `src/` folder and place the output in the `dist/` folder. It
-# also generate the declaration files for typescript
-
-$ yarn watch
-# same as above but keep watching for file changes
-
-$ yarn release
-# run `prebuild` & `build`
 
 $ yarn test
 # run all the test files using JEST
@@ -79,7 +72,7 @@ $ yarn checkEslint
 # same as above but for `eslint`
 
 $ yarn clean
-# remove the dist folder
+# remove the build folder
 ```
 
 Check `package.json` files in the `"scripts"` field for more details.
@@ -110,7 +103,7 @@ Test also can be written in typescript or ES2018. [inline-snapshots] are
 supported!
 
 ```bash
-$ yarn jest # run all your tests with jest
+$ yarn test # run all your tests with jest
 ```
 
 NOTE: You can also run the current file test in the IDE with `ctrl+alt+n`.

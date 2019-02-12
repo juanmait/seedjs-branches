@@ -1,6 +1,9 @@
-# 2019-02-11
+# 2019-02-12
 
 - remove script `watch:types` as is no longer necessary
+
+# 2019-02-11
+
 - make code-runner to play well with `.tsx` & `.jsx` files
 - make code-runner to use [babel-preset-react-app]
 - add code-runner support for regular _jsx/tsx_ files

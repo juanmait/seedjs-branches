@@ -9,7 +9,6 @@
     "test": "react-scripts test --watchAll=false",
     "watch": "yarn build --watch",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
-    "release": "yarn prebuild && yarn build",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
@@ -74,7 +73,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {
