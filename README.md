@@ -82,7 +82,7 @@ $ yarn checkEslint
 # same as above but for `eslint`
 
 $ yarn clean
-# remove the dist folder
+# remove the build folder
 ```
 
 Check `package.json` files in the `"scripts"` field for more details.

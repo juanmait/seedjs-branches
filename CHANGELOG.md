@@ -1,5 +1,6 @@
 # 2019-02-12
 
+- make output go to build instead of dist folder
 - rename script `build` to `compile` to not auto run `prebuid` on compile
 
 # 2019-02-11
