@@ -1,5 +1,4 @@
-import { server } from './server'
+import { start } from './start'
 
-server.listen(3000, () => {
-  console.log('server listening on 3000') //tslint:disable-line
-})
+const PORT = (process.env.PORT && parseInt(process.env.PORT, 10)) || 1234
+start({ port: PORT })

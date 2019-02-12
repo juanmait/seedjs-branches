@@ -1,5 +1,6 @@
 # 2019-02-12
 
+- add example test file for an http server
 - add script `start:production` to start the process using the compiled code
 - make babel compile to ignore all test files
 - add `start` script to start process using [babel-node]
