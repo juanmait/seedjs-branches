@@ -13,7 +13,7 @@ $ yarn install
 # install dependencies
 
 $ yarn start
-# first build and watch for changes
+# run your process in dev mode via babel-node (no compile needed)
 ```
 
 ### Recommended vscode extensions:
@@ -44,18 +44,18 @@ $ yarn start
 ## Scripts (yarn)
 
 ```bash
+$ yarn watch
+# compile and watch for changes
+
+$ yarn build
+# build for prod (prebuild + test + compile)
+
 $ yarn prebuild
 # run `clean`, `fix`, `lint` & `checkTypes`
 
-$ yarn build
-# compile all the `src/` folder and place the output in the `build/` folder. It
+$ yarn compile
+# compile all the `src/` folder and place the output in the `dist/` folder. It
 # also generate the declaration files for typescript
-
-$ yarn watch
-# same as above but keep watching for file changes
-
-$ yarn release
-# run `prebuild` & `build`
 
 $ yarn test
 # run all the test files using JEST

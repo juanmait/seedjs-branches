@@ -4,12 +4,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"yarn watch\" \"yarn watch:types\"",
-    "watch": "yarn build --watch",
+    "watch": "yarn compile --watch",
     "test": "jest",
-    "build": "yarn clean; babel src --out-dir build --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
-    "prebuild": "yarn fix && yarn lint && yarn checkTypes",
-    "release": "yarn prebuild && yarn build",
+    "compile": "babel src --out-dir build --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
+    "build": "yarn compile",
+    "prebuild": "yarn fix && yarn lint && yarn checkTypes && yarn test",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
@@ -62,7 +61,8 @@
   "dependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {
