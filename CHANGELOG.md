@@ -1,5 +1,6 @@
 # 2019-02-11
 
+- add a simple node http server as example file
 - add `esnext` as lib in `tsconfig.json` to restrict code suggestions to node env
 - make the source maps to go `inline`
 - make the output to go to _build_ folder instead of _dist_

@@ -1,11 +1,9 @@
-/* Native */
-import { Dirent } from 'fs'
+import { createServer, IncomingMessage, ServerResponse } from 'http'
 
-/* Custom */
-import readdirAsync from './readdirAsync'
+const server = createServer((_req: IncomingMessage, res: ServerResponse) => {
+  res.end('hello')
+})
 
-const PROJECT_ROOT = `${process.cwd()}`
-
-readdirAsync(PROJECT_ROOT).then((content: Dirent[]) => {
-  content.forEach(item => console.log(item.name)) //tslint:disable-line
+server.listen(3000, () => {
+  console.log('server listening on 3000') //tslint:disable-line
 })
