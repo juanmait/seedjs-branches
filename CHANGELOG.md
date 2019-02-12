@@ -1,3 +1,7 @@
+# 2019-02-12
+
+- rename script `build` to `compile` to not auto run `prebuid` on compile
+
 # 2019-02-11
 
 - update example snapshot to exclude removed scripts folder

@@ -5,13 +5,13 @@
   "license": "MIT",
   "scripts": {
     "start": "concurrently \"yarn watch\" \"yarn watch:types\"",
-    "watch": "yarn build --watch",
+    "watch": "yarn compile --watch",
     "test": "jest",
-    "build": "yarn clean; yarn build:types && babel src --out-dir dist --extensions '.ts,.js' --source-maps --ignore 'src/**/*.spec.js,src/**/*.test.js'",
+    "compile": "yarn compile:types && babel src --out-dir dist --extensions '.ts,.js' --source-maps --ignore 'src/**/*.spec.js,src/**/*.test.js'",
+    "build": "yarn compile",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
-    "release": "yarn prebuild && yarn build",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --isolatedModules false --allowJs false --checkJs false --noEmit false",
-    "watch:types": "yarn build:types --watch",
+    "compile:types": "tsc --emitDeclarationOnly --declaration --declarationMap --isolatedModules false --allowJs false --checkJs false --noEmit false",
+    "watch:types": "yarn compile:types --watch",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",
     "checkTslint": "tslint-config-prettier-check ./tslint.json",
@@ -64,7 +64,8 @@
   "dependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {
