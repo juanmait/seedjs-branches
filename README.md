@@ -44,6 +44,9 @@ $ yarn start
 ## Scripts (yarn)
 
 ```bash
+$ yarn start
+# start the process in development mode via babel-node (no need for compiling)
+
 $ yarn watch
 # compile and watch for changes
 

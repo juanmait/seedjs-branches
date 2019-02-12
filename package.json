@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "start": "NODE_ENV=development babel-node --extensions '.ts,.js' src",
     "watch": "yarn compile --watch",
     "test": "jest",
     "compile": "babel src --out-dir build --extensions '.ts,.js' --source-maps inline --ignore 'src/**/*.spec.js,src/**/*.test.js'",
