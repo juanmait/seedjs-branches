@@ -32,8 +32,7 @@ All the _flavors_ above include:
 ## How to start
 
 1. Create a new repo in your local machine (or clone it from your account).
-2. Add a new remote to it pointing to this one (we call it _upstream_ for this
-   example): `git remote add upstream git@github.com:juanmait/node-typescript-prettier-jest-vscode.git`.
+2. Add a new remote referencing this one (for example: _upstream_): `git remote add upstream git@github.com:juanmait/seedjs.git`.
 3. Fetch the latest data from _upstream_: `git fetch upstream`.
 4. Now let's say you want to base your work on top the `node-process` branch
    from upstream, then: `git merge upstream/node-process`
