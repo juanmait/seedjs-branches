@@ -1,6 +1,6 @@
-# NodeJS + Typescript + Prettier + Jest + Vscode
+# SeedJS
 
-This is scaffolding repo to develop a myriad of different javascript apps and
+A scaffolding repo to develop a myriad of different javascript apps and
 libraries. It comes in different _flavors_ organized in branches, all of them
 for different purposes, setups and/or platforms:
 
@@ -15,32 +15,34 @@ for different purposes, setups and/or platforms:
 
 ## Features
 
-All the _flavors_ above include:
+All the above _flavors_ includes:
 
 - The option to write code in typescript, ES2018 or both.
 - First class support in visual studio code:
-  - Linting on the IDE by using tslint and eslint
-  - Auto format via prettier (support files like `.ts`, `.js`, `.tsx`,
+  - Linting on the IDE by using [tslint] or [eslint]
+  - Auto format via [prettier] (support files like `.ts`, `.js`, `.tsx`,
     `.jsx`, `.json`, `.md` and more).
   - run the current file on the IDE with a simple shortcut without the need
-    of compile (babel-node is used for regular files and jest for tests).
+    of compile ([babel-node] is used for regular files and [jest] for test
+    files).
   - easy debugging.
 - Convenient ways to lint, fix and auto format the source code via yarn scripts
 - Testing with JEST:
-  - support for typescript and ES2018 without the need of any previous compilation.
-  - support for inline snapshots via prettier.
-- Easy configurable GIT Hooks to make testing, linting, type checking, code fixing and formatting, etc..
+  - support for typescript and ES2018 without the need of any previous
+    compilation.
+  - support for [inline snapshots][inline-snapshots] via [prettier].
+- Easy configurable GIT Hooks to make testing, linting, type checking, code
+  fixing and formatting, etc..
 
 ## How to start
 
 1. Create a new repo in your local machine (or clone it from your account).
-2. Add a new remote referencing this one (for example: _upstream_): `git remote add upstream git@github.com:juanmait/seedjs.git`.
+2. Add a new remote referencing this one (for example: _upstream_):
+   `git remote add upstream git@github.com:juanmait/seedjs.git`.
 3. Fetch the latest data from _upstream_: `git fetch upstream`.
 4. Now let's say you want to base your work on top the `process` branch
-   from upstream, then: `git merge upstream/process`
-
-Now you _master_ branch should contain the same content as the `process`
-branch.
+   from upstream, then: `git merge upstream/process`. Now you _master_ branch
+   should contain the same content as the `process` branch.
 
 ## How to sync
 
@@ -70,53 +72,26 @@ This project works better with this specific vscode plugins/extensions:
   files.
 - [code-spell-checker] ... please?
 
----
-
 ## Development
 
 ```bash
 $ yarn install
-# install dependencies
-
-$ yarn start
-# first compile and watch for changes
 ```
 
-### Vscode shortcuts reference:
-
-- `CTRL+i`: auto fix/format current file using [prettier].
-- `CTRL+ALT+N`: run the current file with [babel-node] if ends with `.ts` or
-  `.js` or with [jest] if ends with `.test.ts`.
-
-**Note**: auto format will also run on file save and/or paste (check config at
-`.vscode/settings.json`).
-
----
-
-## Scripts (yarn)
+### Common scripts valid vor all branches
 
 ```bash
 $ yarn build
-# build for prod (it will run prebuild automatically)
+# build for prod (should run prebuild automatically)
 
 $ yarn prebuild
 # run `clean`, `fix`, `lint` & `checkTypes`
-
-$ yarn compile
-# compile all the `src/` folder and place the output in the `dist/` folder. It
-# also generate the declaration files for typescript
-
-$ yarn watch
-# same as compile but keep watching for file changes
 
 $ yarn test
 # run all the test files using JEST
 
 $ yarn checkTypes
 # check for typescript errors
-
-$ yarn compile:types
-# generate typescript declaration only
 
 $ yarn lint
 # check for lint errors using tslint for `.ts` files and eslint for `.js`.
@@ -139,40 +114,44 @@ $ yarn clean
 # remove the build folder
 ```
 
-Check `package.json` files in the `"scripts"` field for more details.
+Check the README and `package.json` in the branch of your choice for more.
 
----
+## Vscode shortcuts reference:
+
+- `CTRL+i`: auto fix/format current file using [prettier].
+- `CTRL+ALT+N`: run the current file. It uses [babel-node] for regular files and
+  [jest] for test files.
+- `F5` launch the debugger.
+
+**Note**: auto format will also run on file save and/or paste (check config at
+`.vscode/settings.json`).
 
 ## Git Hooks
 
-Includes a _pre-commit_ hook that runs `fix`, `lint` and `checkTypes` in your
-**staged files** to check for errors (auto fix them when possible) and check for
-typescript errors before commits. It will **abort** the commit phase if errors
-prevails after the auto fixing. It uses [husky] and [lint-staged] for that.
+All the branches includes a _pre-commit_ hook that runs `fix`, `lint` and
+`checkTypes` in your **staged files** to check for errors and auto fix them when
+possible before commits. It will **abort** the commit phase if errors prevails
+after the auto fixing. It uses [husky] and [lint-staged] for that.
 
----
+## Testing
 
-## Testing with JEST
+Use [jest] for tests.
 
-Test also can be written in typescript or ES2018. [inline-snapshots] are
-supported!
+- Test can be written in typescript or ES2018. [inline-snapshots] are also supported!
+- You can run the current test file in the IDE with `ctrl+alt+n`. No need for
+  compile.
 
-```bash
-$ yarn jest # run all your tests with jest
-```
-
-NOTE: You can also run the current file test in the IDE with `ctrl+alt+n`.
-
----
+Read the README in the branch of your choice to know more.
 
 ## Typescript
 
-The typescript configuration is pretty strict. Is up to you to make it less
-restrictive if you want. Check `tsconfig.json`.
+The typescript configuration is very strict and types are checked even in
+javascript files! It's up to you to make it less restrictive if you want. Check
+`tsconfig.json`.
 
 ---
 
-## Links
+## Some links
 
 **Dependencies:**
 
