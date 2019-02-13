@@ -1,5 +1,6 @@
 # 2019-02-12
 
+- add missing patterns to eslint overrides
 - make babel compile to ignore all test files
 - make test pass ignoring _build_/ folder
 - make output go to build instead of dist folder
