@@ -1,8 +1,57 @@
 # NodeJS + Typescript + Prettier + Jest + Vscode
 
-A scaffolding repo to develop NodeJS apps or libs written either in
-typescript or ES2018 with support for linting, auto formating via [prettier],
-[jest] testing and great support in vscode.
+This is scaffolding repo to develop a myriad of different javascript apps and
+libraries. It comes in different _flavors_ organized in branches, all of them
+for different purposes, setups and/or platforms:
+
+| status   | branch              | description                                                                    |
+| -------- | ------------------- | ------------------------------------------------------------------------------ |
+| **done** | `master`            | main features will be added here before spreading out to the other branches    |
+| **done** | `node-process`      | NodeJS _long-running_ processes (like an HTTP server)                          |
+| todo     | `node-lib`          | Libraries to be used as a part of process or libraries that will run on NodeJS |
+| todo     | `node-browser-lib`  | Libraries that must work on both sides, NodeJS and the browser                 |
+| todo     | `browser-lib`       | Libraries for the browser only                                                 |
+| **done** | `react-app-browser` | Frontend React Apps based on create-react-app                                  |
+
+## Features
+
+All the _flavors_ above include:
+
+- [x] The option to write code in typescript, ES2018 or both.
+- [x] First class support in visual studio code:
+  - [x] Linting on the IDE by using tslint and eslint
+  - [x] Auto format via prettier (support files like `.ts`, `.js`, `.tsx`, `.jsx`, `.json`, `.md` and more).
+  - [x] run the current file on the IDE with a simple shortcut without the need of compile (babel-node is used for regular files and jest for tests).
+  - [x] easy debugging.
+- [x] Convenient ways to lint, fix and auto format the source code via yarn scripts
+- [x] Testing with JEST:
+  - [x] support for typescript and ES2018 without the need of any previous compilation.
+  - [x] support for inline snapshots via prettier.
+- [x] Easy configurable GIT Hooks to make testing, linting, type checking, code fixing and formatting, etc..
+
+## How to start
+
+1. Create a new repo in your local machine (or clone it from your account).
+2. Add a new remote to it pointing to this one (we call it _upstream_ for this
+   example): `git remote add upstream git@github.com:juanmait/node-typescript-prettier-jest-vscode.git`.
+3. Fetch the latest data from _upstream_: `git fetch upstream`.
+4. Now let's say you want to base your work on top the `node-process` branch
+   from upstream, then: `git merge upstream/node-process`
+
+Now you _master_ branch should contain the same content as the `node-process`
+branch.
+
+## How to sync
+
+To integrate the latest changes that may have happened on \_upstream\_\_
+
+```bash
+# update upstream data
+$ git fetch upstream
+
+# merge your branch with the same branch from upstream as before
+$ git merge upstream/node-process
+```
 
 ---
 
