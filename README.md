@@ -4,57 +4,75 @@ This is scaffolding repo to develop a myriad of different javascript apps and
 libraries. It comes in different _flavors_ organized in branches, all of them
 for different purposes, setups and/or platforms:
 
-| status   | branch              | description                                                                    |
-| -------- | ------------------- | ------------------------------------------------------------------------------ |
-| **done** | `master`            | main features will be added here before spreading out to the other branches    |
-| **done** | `node-process`      | NodeJS _long-running_ processes (like an HTTP server)                          |
-| todo     | `node-lib`          | Libraries to be used as a part of process or libraries that will run on NodeJS |
-| todo     | `node-browser-lib`  | Libraries that must work on both sides, NodeJS and the browser                 |
-| todo     | `browser-lib`       | Libraries for the browser only                                                 |
-| **done** | `react-app-browser` | Frontend React Apps based on create-react-app                                  |
+| status   | branch        | description                                                             |
+| -------- | ------------- | ----------------------------------------------------------------------- |
+| **done** | `master`      | main features will be added here before spreading to the other branches |
+| **done** | `process`     | NodeJS _long-running_ processes (like an HTTP server)                   |
+| todo     | `lib`         | Libs that must work on both sides, nodejs and the browser               |
+| todo     | `lib-node`    | Libs that should work on NodeJS only                                    |
+| todo     | `lib-browser` | Libs that should work on the browser only                               |
+| **done** | `react-app`   | Frontend React Apps based on [create-react-app]                         |
 
 ## Features
 
 All the _flavors_ above include:
 
-- [x] The option to write code in typescript, ES2018 or both.
-- [x] First class support in visual studio code:
-  - [x] Linting on the IDE by using tslint and eslint
-  - [x] Auto format via prettier (support files like `.ts`, `.js`, `.tsx`, `.jsx`, `.json`, `.md` and more).
-  - [x] run the current file on the IDE with a simple shortcut without the need of compile (babel-node is used for regular files and jest for tests).
-  - [x] easy debugging.
-- [x] Convenient ways to lint, fix and auto format the source code via yarn scripts
-- [x] Testing with JEST:
-  - [x] support for typescript and ES2018 without the need of any previous compilation.
-  - [x] support for inline snapshots via prettier.
-- [x] Easy configurable GIT Hooks to make testing, linting, type checking, code fixing and formatting, etc..
+- The option to write code in typescript, ES2018 or both.
+- First class support in visual studio code:
+  - Linting on the IDE by using tslint and eslint
+  - Auto format via prettier (support files like `.ts`, `.js`, `.tsx`,
+    `.jsx`, `.json`, `.md` and more).
+  - run the current file on the IDE with a simple shortcut without the need
+    of compile (babel-node is used for regular files and jest for tests).
+  - easy debugging.
+- Convenient ways to lint, fix and auto format the source code via yarn scripts
+- Testing with JEST:
+  - support for typescript and ES2018 without the need of any previous compilation.
+  - support for inline snapshots via prettier.
+- Easy configurable GIT Hooks to make testing, linting, type checking, code fixing and formatting, etc..
 
 ## How to start
 
 1. Create a new repo in your local machine (or clone it from your account).
 2. Add a new remote referencing this one (for example: _upstream_): `git remote add upstream git@github.com:juanmait/seedjs.git`.
 3. Fetch the latest data from _upstream_: `git fetch upstream`.
-4. Now let's say you want to base your work on top the `node-process` branch
-   from upstream, then: `git merge upstream/node-process`
+4. Now let's say you want to base your work on top the `process` branch
+   from upstream, then: `git merge upstream/process`
 
-Now you _master_ branch should contain the same content as the `node-process`
+Now you _master_ branch should contain the same content as the `process`
 branch.
 
 ## How to sync
 
-To integrate the latest changes that may have happened on \_upstream\_\_
+Integrate the latest changes that may have happened on _upstream_
 
 ```bash
 # update upstream data
 $ git fetch upstream
 
 # merge your branch with the same branch from upstream as before
-$ git merge upstream/node-process
+$ git merge upstream/process
 ```
+
+### Recommended vscode extensions:
+
+This project works better with this specific vscode plugins/extensions:
+
+- [prettier-vscode] - format almost all files (`.md`, `.js`, `.ts`, `.tsx`,
+  `.json`, etc..) with one simple shortcut on the IDE.
+- [eslint-vscode] - show linting errors in javascript files.
+- [vscode-typescript-tslint-plugin] - show linting errors in typescript files.
+- [code-runner] - used to run the current open file in the IDE (will run
+  [babel-node] for regular files and [jest] for test files).
+- [jest-snapshot-language-support] - add syntax highlighting for your Jest
+  [snapshots][snapshot-testing].
+- [markdown-checkbox] - add support for github checkboxes when previewing `.md`
+  files.
+- [code-spell-checker] ... please?
 
 ---
 
-## Get started
+## Development
 
 ```bash
 $ yarn install
@@ -63,18 +81,6 @@ $ yarn install
 $ yarn start
 # first compile and watch for changes
 ```
-
-### Recommended vscode extensions:
-
-- [prettier-vscode] - format almost all files (`.md`, `.js`, `.ts`, `.tsx`,
-  `.json`, etc..) with one simple shortcut on the IDE.
-- [vscode-typescript-tslint-plugin] - show linting errors in typescript files.
-- [code-runner] - used to run the current open file in the IDE. The project have
-  a script that will launch the file with NodeJS or JEST depending on the file
-  extension.
-- [jest-snapshot-language-support] - add syntax highlighting for your Jest
-  [snapshots][snapshot-testing].
-- [eslint-vscode] - show linting errors in javascript files.
 
 ### Vscode shortcuts reference:
 
@@ -166,37 +172,6 @@ restrictive if you want. Check `tsconfig.json`.
 
 ---
 
-## Fork
-
-- Clone or create a new empty repo.
-- Add it as remote _base_: `git remote add base git@github.com:juanmait/node-typescript-prettier-jest-vscode.git`.
-- Fetch remote info: `git remote update`.
-- merge with _base_: `git merge base/master`.
-- Update your `package.json` and the README to match your preference and commit.
-- Set master to your origin: `git branch --set-upstream-to=origin/master master`.
-- Push to origin: `git push origin master`.
-
-## Sync
-
-Integrate the changes in this repo on yours.
-
-```bash
-# Place yourself in master (your repo)
-$ git checkout master
-
-# Set the **_base_** upstream
-$ git remote add base git@github.com:juanmait/node-typescript-prettier-jest-vscode.git
-
-# Update the remotes info
-$ git remote update
-
-# Merge with the branch `node-browser-lib` from **_base_**
-$ git merge base/node-browser-lib
-
-# Push to origin
-$ git push origin master
-```
-
 ## Links
 
 **Dependencies:**
@@ -211,6 +186,7 @@ $ git push origin master
 - [lint-staged]
 - [babel-node]
 - [prettier-eslint-cli]
+- [create-react-app]
 
 [tslint]: https://palantir.github.io/tslint/
 [prettier]: https://prettier.io/
@@ -221,6 +197,7 @@ $ git push origin master
 [babel-node]: https://babeljs.io/docs/en/babel-node
 [babel]: https://babeljs.io/
 [eslint]: https://eslint.org/
+[create-react-app]: https://facebook.github.io/create-react-app/
 
 **Vscode Extensions:**
 
@@ -229,6 +206,8 @@ $ git push origin master
 - [code-runner]
 - [jest-snapshot-language-support]
 - [ESLint][eslint-vscode]
+- [code-spell-checker]
+- [markdown-checkbox]
 
 [prettier-vscode]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 [vscode-typescript-tslint-plugin]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
@@ -237,6 +216,8 @@ $ git push origin master
 [eslint-vscode]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [prettier-eslint-cli]: https://github.com/prettier/prettier-eslint-cli
 [tslint]: https://palantir.github.io/tslint/
+[code-spell-checker]: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+[markdown-checkbox]: https://marketplace.visualstudio.com/items?itemName=bierner.markdown-checkbox
 
 **Guides, references:**
 
