@@ -7,7 +7,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build ",
     "test": "react-scripts test --watchAll=false",
-    "watch": "yarn build --watch",
     "prebuild": "yarn clean && yarn fix && yarn lint && yarn checkTypes",
     "checkTypes": "tsc --skipLibCheck false",
     "checkConflicts": "yarn checkTslint && yarn checkEslint",

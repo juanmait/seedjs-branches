@@ -1,6 +1,7 @@
 # 2019-02-12
 
 - remove script `watch:types` as is no longer necessary
+- add missing patterns to eslint overrides
 
 # 2019-02-11
 

@@ -14,7 +14,7 @@
   "extends": ["eslint:recommended", "react-app", "prettier"],
   "overrides": [
     {
-      "files": ["*.test.js"],
+      "files": ["*.test.js", "*.spec.js", "__test__/**/*.js"],
       "env": {
         "jest": true
       }
