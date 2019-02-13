@@ -9,12 +9,12 @@
   },
   "env": {
     "node": true,
-    "browser": true
+    "browser": false
   },
   "extends": ["eslint:recommended", "prettier"],
   "overrides": [
     {
-      "files": ["*.test.js"],
+      "files": ["*.test.js", "*.spec.js", "__test__/**/*.js"],
       "env": {
         "jest": true
       }

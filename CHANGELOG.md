@@ -1,7 +1,9 @@
 # 2019-02-12
 
+- turn _browser_ to false in eslint config
 - add example test file for an http server
 - add script `start:production` to start the process using the compiled code
+- add missing patterns to eslint overrides
 - make babel compile to ignore all test files
 - add `start` script to start process using [babel-node]
 - make test pass ignoring _build_/ folder
