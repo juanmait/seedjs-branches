@@ -1,3 +1,7 @@
+# 2019-02-14
+
+- update readme to direct the user to [doc/wiki.process.md](doc/wiki.process.md)
+
 # 2019-02-12
 
 - turn _browser_ to false in eslint config
