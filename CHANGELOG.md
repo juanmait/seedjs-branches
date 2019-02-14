@@ -1,3 +1,7 @@
+# 2019-02-14
+
+- update readme to direct the user to [wiki.react-app.md](doc/wiki.react-app.md)
+
 # 2019-02-12
 
 - remove script `watch:types` as is no necessary to generate types for react
