@@ -1,5 +1,6 @@
 # 2019-02-14
 
+- add _home_ link in the README
 - update readme to direct the user to [wiki.react-app.md](doc/wiki.react-app.md)
 - create wiki pages for every branch in _doc_/ folder
 
