@@ -1,6 +1,8 @@
 # 2019-02-12
 
-- remove script `watch:types` as is no longer necessary
+- remove script `watch:types` as is no necessary to generate types for react
+  apps
+- add info about branching model to the README.
 - add missing patterns to eslint overrides
 
 # 2019-02-11
