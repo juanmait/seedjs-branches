@@ -19,6 +19,7 @@ Array [
   ".vscode",
   "CHANGELOG.md",
   "README.md",
+  "doc",
   "jest.config.js",
   "node_modules",
   "package.json",
