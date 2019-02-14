@@ -1,4 +1,4 @@
 # SeedJS
 
-[See docs for process branch here](doc/wiki.process.md)
-[Home](doc/wiki.home.md)
+- [See docs for the _process_ branch here](doc/wiki.process.md)
+- [Home](doc/wiki.home.md)
