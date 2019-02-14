@@ -1,6 +1,7 @@
 # 2019-02-14
 
 - update readme to direct the user to [doc/wiki.process.md](doc/wiki.process.md)
+- create wiki pages for every branch in _doc_/ folder
 
 # 2019-02-12
 
