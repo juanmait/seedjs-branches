@@ -1,3 +1,7 @@
+# 2019-02-14
+
+- create wiki pages for every branch in _doc_/ folder
+
 # 2019-02-12
 
 - add info about branching model to the README.
