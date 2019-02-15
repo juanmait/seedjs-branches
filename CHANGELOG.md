@@ -1,8 +1,15 @@
+# 2019-02-15
+
+- add first working version of branch electron-react-basic.
+
 # 2019-02-14
 
+- create **electron-react-basic** branch and install electron
 - add _home_ link in the README
 - update readme to direct the user to [wiki.react-app.md](doc/wiki.react-app.md)
 - create wiki pages for every branch in _doc_/ folder
+
+[electron]: https://electronjs.org/
 
 # 2019-02-12
 

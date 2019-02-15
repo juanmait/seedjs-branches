@@ -62,7 +62,7 @@
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false
   },
-  "include": ["src"],
+  "include": ["src", "typings"],
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
