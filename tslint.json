@@ -7,6 +7,7 @@
     "ordered-imports": false,
     "object-literal-sort-keys": false,
     "variable-name": [true, "allow-leading-underscore"],
-    "interface-name": false
+    "interface-name": false,
+    "no-console": true
   }
 }

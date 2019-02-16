@@ -19,5 +19,9 @@
         "jest": true
       }
     }
-  ]
+  ],
+  "globals": {
+    "console": true,
+    "process": true
+  }
 }

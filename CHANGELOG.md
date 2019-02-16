@@ -1,6 +1,12 @@
 # 2019-02-16
 
-- disable `node` & `browser` in .eslintrc.json
+- add _globals_ `console` & `process` in `.eslintrc.json`
+- add some _global_ typings for `console` and `process.env`
+- add more suitable example files (for an agnostic lib)
+- add `"NODE_ENV=development BABEL_ENV=development"` to code-runner settings
+- include `"typings/**/*"` to the list of includes in tsconfig
+- remove `@types/node` dependency
+- disable `node` & `browser` in `.eslintrc.json`
 - update readme
 - reorganize package scripts
 - rebuild yarn.lock
