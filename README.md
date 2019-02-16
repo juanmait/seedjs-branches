@@ -5,13 +5,13 @@ the browser.
 
 **Ideal uses cases**
 
-1. Agnostic libraries that will NOT use native APIs at all neither from Nodejs
-   or the browser.
-2. Libraries that will only READ from native APIs only to know more about the
-   kind of environment in which they are running (e.g.:
+1. _**Agnostic libraries**_ that _should_ NOT call native APIs at all, neither
+   from Nodejs or the browser.
+2. Libraries that can eventually READ from native APIs only to know more about
+   the kind of environment in which they are running (e.g.:
    `if (window && window.localStorage) { ... }`).
-3. Libraries that based on the info from point 2, decides to run a nodejs based
-   lib or a browser based lib to do the same job.
+3. Libraries that based on the info from point **2**, decides to use a nodejs
+   targeted lib or a browser targeted lib to do the same job.
 
 ## Available Scripts
 
