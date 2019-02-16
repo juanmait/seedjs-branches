@@ -1,3 +1,7 @@
+# 2019-02-16
+
+- upgrade dependency versions
+
 # 2019-02-14
 
 - create wiki pages for every branch in _doc_/ folder
