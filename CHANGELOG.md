@@ -1,5 +1,7 @@
 # 2019-02-16
 
+- update readme
+- reorganize package scripts
 - rebuild yarn.lock
 - upgrade dependency versions
 
