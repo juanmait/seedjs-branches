@@ -1,5 +1,6 @@
 # 2019-02-16
 
+- rebuild yarn.lock
 - upgrade dependency versions
 
 # 2019-02-14
