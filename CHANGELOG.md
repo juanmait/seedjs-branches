@@ -1,5 +1,6 @@
 # 2019-02-16
 
+- disable `node` & `browser` in .eslintrc.json
 - update readme
 - reorganize package scripts
 - rebuild yarn.lock

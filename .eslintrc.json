@@ -8,8 +8,8 @@
     "allowImportExportEverywhere": false
   },
   "env": {
-    "node": true,
-    "browser": true
+    "node": false,
+    "browser": false
   },
   "extends": ["eslint:recommended", "prettier"],
   "overrides": [
