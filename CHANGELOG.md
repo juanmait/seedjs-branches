@@ -1,3 +1,7 @@
+# 2019-02-17
+
+- add `@types/node`
+
 # 2019-02-16
 
 - add support for `process.env` interpolation at build time

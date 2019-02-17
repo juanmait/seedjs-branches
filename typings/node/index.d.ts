@@ -5,10 +5,6 @@ declare namespace NodeJS {
     NODE_ENV?: 'development' | 'production' | 'test'
     BABEL_ENV?: 'development' | 'production' | 'test'
   }
-
-  export interface Process {
-    env: ProcessEnv
-  }
 }
 
 // -----------------------------------------------------------------------------
