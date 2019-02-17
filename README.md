@@ -1,4 +1,7 @@
-# SeedJS
+# DEPRECATED:
+Deprecated in favor of this monorepo: https://github.com/juanmait/seedjs
+
+# SeedJS-branches
 
 A scaffolding repo to develop a myriad of different javascript apps and
 libraries. It comes in different _flavors_ organized in branches, all of them
