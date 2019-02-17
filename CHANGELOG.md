@@ -1,5 +1,6 @@
 # 2019-02-17
 
+- enable `node` env in eslintrc
 - add `@types/node`
 
 # 2019-02-16
