@@ -1,3 +1,7 @@
+# 2019-02-17
+
+- enable globals `module` & `exports` in eslintrc
+
 # 2019-02-16
 
 - add support for `process.env` interpolation at build time
