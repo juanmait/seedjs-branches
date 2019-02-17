@@ -3,7 +3,11 @@
 This branch is for development of libraries that should run on both, nodejs and
 the browser.
 
-**Ideal uses cases**:
+## Use Cases
+
+This are the _ideal_ use cases. As such, not always will be posible to stay
+_aligned_. So some of the restrictions can be easily disabled via configuring
+eslint, tsconfig and or installing @types.
 
 1. _**Agnostic libraries**_ that _should_ NOT call native APIs at all, neither
    from Nodejs or the browser.
@@ -19,6 +23,35 @@ be used as a part of other libraries, apps, or programs.
 
 **Note 2**: The output when you build for _production_ will still use CommonJS
 modules (e.g: `const { hello } = require('./world')`).
+
+## Env interpolation
+
+This setup uses two babel plugins to convert envs (like `process.env.MY_ENV`)
+to plain strings at build time. The plugins are:
+
+- [babel-plugin-transform-node-env-inline]
+- [babel-plugin-transform-inline-environment-variables]
+
+So for example, having **MY_ENV=somestring**:
+
+```js
+const myEnv = process.env.MY_ENV
+
+// will be transformed to..
+
+const myEnv = 'somestring'
+
+// it also transform statements like this:
+
+const isProd = process.env.NODE_ENV === 'production'
+
+// into this...
+
+const isProd = true
+```
+
+Envs can be given via command line when launching babel like
+`NODE_ENV=development babel babel src --out-dir build ...`
 
 ## Available Scripts
 
@@ -59,3 +92,6 @@ $ yarn checkConflicts
 $ yarn clean
 # remove the build folder
 ```
+
+[babel-plugin-transform-node-env-inline]: https://babeljs.io/docs/en/babel-plugin-transform-node-env-inline
+[babel-plugin-transform-inline-environment-variables]: https://www.npmjs.com/package/babel-plugin-transform-inline-environment-variables

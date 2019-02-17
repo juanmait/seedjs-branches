@@ -1,5 +1,6 @@
 # 2019-02-17
 
+- add info about env interpolation feature (#23)
 - enable globals `require` & _timeout_ related functions in eslintrc
 - enable globals `module` & `exports` in eslintrc
 
