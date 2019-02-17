@@ -1,3 +1,9 @@
-import { hello } from './lib/hello'
-console.log(hello(), process.env.BABEL_ENV) //tslint:disable-line
-export default {}
+import { nodeEnv, babelEnv, isProd, isDev, isTest } from './envs'
+
+export const formatedEnvs = `
+  nodeEnv = ${nodeEnv}
+  babelEnv = ${babelEnv}
+  isProd = ${isProd}
+  isDev = ${isDev}
+  isTest = ${isTest}
+`
