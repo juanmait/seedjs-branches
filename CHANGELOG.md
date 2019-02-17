@@ -1,5 +1,7 @@
 # 2019-02-16
 
+- add support for `process.env` interpolation at build time
+- fix `BABEL_ENV` & `NODE_ENV` in package scripts (#21)
 - add `targets.browsers` to babelrc
 - add example test file
 - add _globals_ `console` & `process` in `.eslintrc.json`

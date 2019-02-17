@@ -3,7 +3,7 @@
 This branch is for development of libraries that should run on both, nodejs and
 the browser.
 
-**Ideal uses cases**
+**Ideal uses cases**:
 
 1. _**Agnostic libraries**_ that _should_ NOT call native APIs at all, neither
    from Nodejs or the browser.
@@ -13,6 +13,13 @@ the browser.
 3. Libraries that based on the info from point **2**, decides to use a nodejs
    targeted lib or a browser targeted lib to do the same job.
 
+**Note 1**: Keep in mind that ideally a _library_ is just a set of tools,
+utilities or helpers that does nothing by themselves but instead are intended to
+be used as a part of other libraries, apps, or programs.
+
+**Note 2**: The output when you build for _production_ will still use CommonJS
+modules (e.g: `const { hello } = require('./world')`).
+
 ## Available Scripts
 
 ```bash
@@ -21,7 +28,14 @@ $ yarn start
 # changes. It also launch a watcher to build the typescript declaration files.
 
 $ yarn build
-# build for prod (should run prebuild automatically)
+# build for prod (will run `prebuild` automatically). This does not minify the
+# output, does not make dead code elimination and does not bundle your files in
+# one single chunk of code. If the thing you're building that use this library
+# runs on nodejs, then minification or bundling have no sense. In the other hand
+# the app you're building that is using this library will run in the browser,
+# then minification and bundling is the responsibility of the bundling tool that
+# you may use when releasing to production (e.g: webpack, parcel, rollup,
+# create-react-app).
 
 $ yarn prebuild
 # run `clean`, `fix`, `lint` & `checkTypes`
@@ -36,18 +50,11 @@ $ yarn lint
 # check for lint errors using tslint for `.ts` files and eslint for `.js`.
 
 $ yarn fix
-# run auto format and auto fix using `prettier-tslint` and `prettier-eslint`
+# auto format and auto fix all the source code using `prettier-tslint` and
+# `prettier-eslint`
 
 $ yarn checkConflicts
-# detect eslint/tslint configurations that can collide with prettier
-
-$ yarn checkTslint
-# check for any conflict between `tslint` and prettier configs. Run this when
-# you add new rules to your tslint.json file. It will warn you about what are
-# the rules that you should avoid.
-
-$ yarn checkEslint
-# same as above but for `eslint`
+# detect configurations conflicts between eslint/tslint and prettier
 
 $ yarn clean
 # remove the build folder
