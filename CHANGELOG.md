@@ -1,5 +1,6 @@
 # 2019-02-16
 
+- add `targets.browsers` to babelrc
 - add example test file
 - add _globals_ `console` & `process` in `.eslintrc.json`
 - add some _global_ typings for `console` and `process.env`

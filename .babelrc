@@ -3,8 +3,14 @@
     [
       "@babel/preset-env",
       {
+        /*
+         * read more about targets:
+         * https: //babeljs.io/docs/en/babel-preset-env#targets
+         */
         "targets": {
-          "node": "current"
+          "node": "current",
+          // same settings as create-react-app
+          "browsers": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
         }
       }
     ],
