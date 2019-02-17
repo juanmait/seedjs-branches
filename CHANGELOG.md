@@ -1,5 +1,6 @@
 # 2019-02-17
 
+- disable process.env interpolation at build time
 - enable `node` env in eslintrc
 - add `@types/node`
 

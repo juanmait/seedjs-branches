@@ -8,11 +8,7 @@
          * https: //babeljs.io/docs/en/babel-preset-env#targets
          */
         "targets": {
-          "node": "current",
-
-          // same settings as create-react-app
-          // see: https://github.com/browserslist/browserslist for more info..
-          "browsers": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+          "node": "current"
         }
       }
     ],
@@ -20,13 +16,6 @@
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread",
-
-    // see: https://babeljs.io/docs/en/babel-plugin-transform-node-env-inline
-    "transform-node-env-inline",
-
-    // see:
-    // https://babeljs.io/docs/en/babel-plugin-transform-inline-environment-variables
-    "transform-inline-environment-variables"
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }

@@ -46,8 +46,6 @@
     "@types/node": "^11.9.4",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
-    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
-    "babel-plugin-transform-node-env-inline": "^0.4.3",
     "concurrently": "^4.1.0",
     "eslint": "^5.14.0",
     "eslint-config-prettier": "^4.0.0",
