@@ -1,5 +1,6 @@
 # 2019-02-17
 
+- enable globals `require` & _timeout_ related functions in eslintrc
 - enable globals `module` & `exports` in eslintrc
 
 # 2019-02-16
